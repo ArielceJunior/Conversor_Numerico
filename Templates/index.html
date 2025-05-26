@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Conversor Decimal para Binário</title>
+</head>
+<body>
+    <h1>Conversor Decimal para Binário</h1>
+    <form method="post">
+        <input type="text" name="decimal_number" placeholder="Digite um número decimal" required>
+        <button type="submit">Converter</button>
+    </form>
+    {% if result is not none %}
+        <p>Binário: {{ result }}</p>
+    {% endif %}
+</body>
+</html>
