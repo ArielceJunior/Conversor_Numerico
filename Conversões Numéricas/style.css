@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    flex: 1;
+  }
+  
+  #div-cabeçalho {
+    background-color: #9615d1;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  
+  #h2-home {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.5;
+  }  
+
+  span {
+    color: rgb(247, 191, 119);
+  }
+  
+  #div-img-home {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #div-img-home img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0;
+  }
+  
+  #div-geral-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 100px;
+    flex: 0;
+    /* background-color: yellow; */
+  }
+  
+  #div-geral-cards > div {
+    background-color: white;
+    border: 1px solid #dee2e6;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    text-align: center;
+    flex: 1 1 250px;
+    max-width: 300px;
+    height: auto;
+  }
+  
+  #div-geral-cards p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  
+  /* Botões */
+  #div-geral-cards button {
+    background-color: #b9256a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #div-geral-cards button:hover {
+    background-color: #e66c34;
+  }
+  
+  /* Footer */
+  #div-footer {
+    margin: 0;
+    padding: 20px 10px;
+    background-color: #062d68;
+    color: white;
+    text-align: center;
+  }
+  
+  #div-footer footer {
+    margin: 0 !important;
+    padding: 0;
+  }
+  
+  #p-footer {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+  }
+  
+  /* medias queries */
+  @media (max-width: 768px) {
+    #h2-home {
+      font-size: 1.5rem;
+    }
+  
+    #div-geral-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
