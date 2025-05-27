@@ -20,7 +20,7 @@
   }
   
   #div-cabeçalho {
-    background-color: #9615d1;
+    background-color: #68148f;
     color: white;
     padding: 40px 20px;
     text-align: center;
@@ -79,7 +79,7 @@
   
   /* Botões */
   #div-geral-cards button {
-    background-color: #b9256a;
+    background-color: #b9256a !important;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -90,7 +90,7 @@
   }
   
   #div-geral-cards button:hover {
-    background-color: #e66c34;
+     color: rgb(247, 191, 119);
   }
   
   /* Footer */
