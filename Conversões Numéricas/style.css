@@ -71,6 +71,10 @@
     max-width: 300px;
     height: auto;
   }
+
+  #div-card-descricao {
+    padding: 30px !important;
+  }
   
   #div-geral-cards p {
     font-size: 1rem;
@@ -106,11 +110,35 @@
     margin: 0 !important;
     padding: 0;
   }
+
+  #p-home {
+    padding-bottom: 20px;
+  }
   
   #p-footer {
     margin: 0;
     padding: 0;
     font-size: 1rem;
+  }
+
+  #p-descricao {
+    /* background-color: yellow; */
+    text-align: justify;
+    padding-top: 20px;
+  }
+
+  #p-title-ul {
+    text-align: left;
+  }
+
+  ul {
+    text-align: left;
+  }
+
+  #div-btn-voltar {
+    text-align: center;
+    background-color: yellow;
+    margin-top: 0px;
   }
   
   /* medias queries */
