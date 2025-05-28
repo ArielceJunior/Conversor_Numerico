@@ -20,7 +20,7 @@
   }
   
   #div-cabeçalho {
-    background-color: #68148f;
+    background-color: #062d68;
     color: white;
     padding: 40px 20px;
     text-align: center;
@@ -57,8 +57,14 @@
     gap: 20px;
     padding: 100px;
     flex: 0;
-    /* background-color: yellow; */
+    padding-bottom: 10px;
   }
+
+   #div-geral-cards.home {
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
+  
   
   #div-geral-cards > div {
     background-color: white;
@@ -76,6 +82,11 @@
     padding: 30px !important;
   }
   
+  #div-card-integrantes {
+    padding: 30px !important;
+    height: 625px !important;
+  }
+
   #div-geral-cards p {
     font-size: 1rem;
     margin-bottom: 15px;
@@ -137,8 +148,13 @@
 
   #div-btn-voltar {
     text-align: center;
-    background-color: yellow;
     margin-top: 0px;
+    padding-bottom: 40px;
+  }
+
+  #img-integrantes {
+    max-height: 200x; 
+    object-fit: cover;
   }
   
   /* medias queries */
