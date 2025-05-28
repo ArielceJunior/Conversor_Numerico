@@ -3,6 +3,7 @@ from flask import Flask, render_template, request;
 app = Flask(__name__)
 app.secret_key = '123'
 
+# Conversão de decimal para binário
 def decimal_to_binary(decimal):
     if decimal == 0:
         return "0"
@@ -11,7 +12,7 @@ def decimal_to_binary(decimal):
         binary = str(decimal % 2) + binary
         decimal = decimal // 2
     return binary
-
+# Conversão de decimal para hexadecimal
 def decimal_to_hexadecimal(decimal):
     if decimal == 0:
         return "0"
@@ -24,16 +25,70 @@ def decimal_to_hexadecimal(decimal):
             hexadecimal = chr(remainder - 10 + ord('A')) + hexadecimal
         decimal = decimal // 16
     return hexadecimal
-
+# Conversão de decimal para octal
+def decimal_to_octal(decimal):
+    if decimal == 0:
+        return "0"
+    octal = ""
+    while decimal > 0:
+        octal = str(decimal % 8) + octal
+        decimal = decimal // 8
+    return octal
+# Conversão de binario para decimal
+def binary_to_decimal(binary):
+    decimal = 0
+    for digit in binary:
+        decimal = decimal * 2 + int(digit)
+    return decimal
+# Conversão de binario para hexadecimal
+def binary_to_hexadecimal(binary):
+    decimal = binary_to_decimal(binary)
+    return decimal_to_hexadecimal(decimal)
+# Conversão de binario para octal   
+def binary_to_octal(binary):
+    decimal = binary_to_decimal(binary)
+    return decimal_to_octal(decimal)
+# Conversão de hexadecimal para decimal
+def hexadecimal_to_decimal(hexadecimal):
+    decimal = 0
+    for digit in hexadecimal:
+        decimal = decimal * 16 + int(digit, 16)
+    return decimal
+# Conversão de hexadecimal para binário
+def hexadecimal_to_binary(hexadecimal):
+    decimal = hexadecimal_to_decimal(hexadecimal)
+    return decimal_to_binary(decimal)
+# Conversão de hexadecimal para octal
+def hexadecimal_to_octal(hexadecimal):
+    decimal = hexadecimal_to_decimal(hexadecimal)
+    return decimal_to_octal(decimal)
+# Conversão de octal para decimal
+def octal_to_decimal(octal):
+    decimal = 0
+    for digit in octal:
+        decimal = decimal * 8 + int(digit)
+    return decimal
+# Conversão de octal para binário
+def octal_to_binary(octal):
+    decimal = octal_to_decimal(octal)
+    return decimal_to_binary(decimal)
+# Conversão de octal para hexadecimal
+def octal_to_hexadecimal(octal):
+    decimal = octal_to_decimal(octal)
+    return decimal_to_hexadecimal(decimal)
 
 
 @app.route('/')
 def home():
-	return 'Hello, World!'
+	return render_template('home.html')
 
-@app.route('/about')
+@app.route('/integrantes.html')
 def about():
-    return 'This is the about page.'
+    return render_template('integrantes.html')
+
+@app.route('/descricao.html')
+def description():
+    return render_template('descricao.html')
 
 @app.route('/conversors', methods=['GET', 'POST'])
 def conversors():
